@@ -1,14 +1,7 @@
 <?php
 session_start();
 
-// Ativar a exibição de erros
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
-// Verifique se a sessão contém 'id' e se os campos POST estão definidos
-if (!isset($_SESSION['id'])) {
-    die('Erro: A sessão não contém o ID.');
-}
 
 $titulo = isset($_POST['titulo']) ? str_replace('#', '-', $_POST['titulo']) : '';
 $categoria = isset($_POST['categoria']) ? str_replace('#', '-', $_POST['categoria']) : '';
